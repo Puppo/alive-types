@@ -1,0 +1,21 @@
+body {
+  background-color: #0050a4;
+}
+
+#root {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #f3f3f3;
+  margin-top: 60px;
+}
+
+a,
+a:visited {
+  color: #c9c9c9;
+}
+
+h4 + h4 {
+  margin-top: 40px;
+}
