@@ -1,16 +1,25 @@
-import './App.css'
+import React, { lazy } from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import './App.css';
+import Home from './pages/Home';
+
+const OrderList = lazy(() => import("./pages/OrderList"));
+
+const router = createBrowserRouter([{
+  path: '/orders',
+  element: <React.Suspense><OrderList /></React.Suspense>
+}, {
+  path: '/',
+  element: <React.Suspense><Home /></React.Suspense>
+}, {
+  path: '**',
+  element: <React.Suspense><Home /></React.Suspense>
+}], {
+  basename: import.meta.env.BASE_URL
+})
 
 function App() {
-  return <>
-    <img src="https://m-u-g.github.io/assets/images/logo-no-margin-ext.svg" />
-    <h1>Hello to Ts Best Practices!</h1>
-    <h4>
-      The repository is hosted on<br /><a href="https://github.com/Puppo/MUG-2022-ts-best-practices" target="_blank">https://github.com/Puppo/MUG-2022-ts-best-practices</a>.
-    </h4>
-    <h4>
-      My Typescript Series on dev.to<br /><a href="https://dev.to/this-is-learning/series/11213" target="_blank">https://dev.to/this-is-learning/series/11213</a>.
-    </h4>
-  </>
+  return <RouterProvider router={router} />;
 }
 
 export default App

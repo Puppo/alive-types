@@ -1,0 +1,16 @@
+.home {
+  color: #f3f3f3;
+}
+
+.home a {
+  text-decoration: underline;
+}
+
+.home a,
+.home a:visited {
+  color: #c9c9c9;
+}
+
+h4 + h4 {
+  margin-top: 40px;
+}
