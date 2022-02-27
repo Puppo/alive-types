@@ -22,7 +22,7 @@ export default function InProgressOrder({ order, onView }: InProgressOrderProps)
             <div className="content has-text-left">
                 <em>Total: </em><strong>{currency.format(order.total)}</strong>
                 <br />
-                <em>Order Date: </em><strong>{date.format(date.decode(order.date))}</strong>
+                <em>Order Date: </em><strong>{date.format(order.date)}</strong>
             </div>
         </div>
         <footer className="card-footer">

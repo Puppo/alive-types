@@ -23,9 +23,9 @@ export default function ShipOrder({ order, onView }: ShipOrderProps): ReactEleme
             <div className="content has-text-left">
                 <em>Total: </em><strong>{currency.format(order.total)}</strong>
                 <br />
-                <em>Order Date: </em><strong>{date.format(date.decode(order.date))}</strong>
+                <em>Order Date: </em><strong>{date.format(order.date)}</strong>
                 <p>
-                    <em>Shipped in date </em><strong>{date.format(date.decode(order.ship.date))}</strong>
+                    <em>Shipped in date </em><strong>{date.format(order.ship.date)}</strong>
                     <br />
                     <em>With: </em><strong>{order.ship.company}</strong>
                     <br />

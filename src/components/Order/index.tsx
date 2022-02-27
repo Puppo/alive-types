@@ -11,7 +11,7 @@ type OrderProps = {
     onDelete: (order: OrderModel) => void
 }
 
-export default function Order({ order, onView, onDelete }: OrderProps): ReactElement {
+export default function Order({ order, onView, onDelete }: OrderProps): ReactElement | null {
     switch (order.type) {
         case 'draft':
             return <DraftOrder onView={onView} onDelete={onDelete} order={order} />;

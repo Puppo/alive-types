@@ -51,7 +51,7 @@ function List() {
 
 
     return <>
-        {error && <Notification type='error' text={error.message} />}
+        {error && <Notification type='error' text={error.message} onClose={() => { setError(null) }} />}
         <div className="container is-fluid pt-5">
             <h1 className="title has-text-white">Order List</h1>
             <div className="columns is-flex is-flex-wrap-wrap">

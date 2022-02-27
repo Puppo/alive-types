@@ -4,9 +4,10 @@ import { ReactElement, ReactNode } from 'react';
 type NotificationProps = {
   type: 'success' | 'warning' | 'error';
   text: string | ReactNode;
+  onClose: () => void;
 };
 
-export default function Notification({ text, type }: NotificationProps): ReactElement {
+export default function Notification({ text, type, onClose }: NotificationProps): ReactElement {
   return (
     <div className={
       classnames(
@@ -18,7 +19,7 @@ export default function Notification({ text, type }: NotificationProps): ReactEl
         }
       )
     }>
-      <button type='button' className="delete">close</button>
+      <button type='button' className="delete" onClick={() => onClose()}>close</button>
       {text}
     </div>
   );

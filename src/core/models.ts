@@ -1,71 +1,36 @@
-export type IsoDate = string;
+import { TypeOf } from 'zod';
+import {
+  CurrencySchema,
+  CustomerSchema,
+  DeliveryOrderSchema,
+  DeliverySchema,
+  DraftOrderSchema,
+  InProgressOrderSchema,
+  IsoDateSchema,
+  OrderSchema,
+  ShipOrderSchema,
+  ShippingSchema,
+} from './schemas';
 
-export type CustomerModel = {
-  id: number;
-  name: string;
-  email: string;
-  phone: string;
-};
+export type IsoDate = TypeOf<typeof IsoDateSchema>;
 
-type ShippingModel = {
-  date: IsoDate;
-  trackingNumber: string;
-  company: string;
-};
+export type CustomerModel = TypeOf<typeof CustomerSchema>;
 
-type DeliveryModel = {
-  date: IsoDate;
-  signedBy: string;
-};
+export type ShippingModel = TypeOf<typeof ShippingSchema>;
 
-export type Currency = {
-  amount: number;
-  currency: 'USD' | 'EUR';
-};
+export type DeliveryModel = TypeOf<typeof DeliverySchema>;
 
-export type DraftOrderModel = {
-  type: 'draft';
-  id: string;
-  createdAt: IsoDate;
-  customer: CustomerModel;
-  total: Currency;
-};
+export type Currency = TypeOf<typeof CurrencySchema>;
 
-export type InProgressOrderModel = {
-  type: 'progress';
-  id: string;
-  createdAt: IsoDate;
-  customer: CustomerModel;
-  date: IsoDate;
-  total: Currency;
-};
+export type DraftOrderModel = TypeOf<typeof DraftOrderSchema>;
 
-export type ShipOrderModel = {
-  type: 'ship';
-  id: string;
-  createdAt: IsoDate;
-  customer: CustomerModel;
-  date: IsoDate;
-  total: Currency;
-  ship: ShippingModel;
-};
+export type InProgressOrderModel = TypeOf<typeof InProgressOrderSchema>;
 
-export type DeliveryOrderModel = {
-  type: 'delivery';
-  id: string;
-  createdAt: IsoDate;
-  date: IsoDate;
-  customer: CustomerModel;
-  total: Currency;
-  ship: ShippingModel;
-  delivery: DeliveryModel;
-};
+export type ShipOrderModel = TypeOf<typeof ShipOrderSchema>;
 
-export type OrderModel =
-  | DraftOrderModel
-  | InProgressOrderModel
-  | ShipOrderModel
-  | DeliveryOrderModel;
+export type DeliveryOrderModel = TypeOf<typeof DeliveryOrderSchema>;
+
+export type OrderModel = TypeOf<typeof OrderSchema>;
 
 export type OrderWithDelete = DraftOrderModel;
 export type OrderWithEdit = DraftOrderModel;

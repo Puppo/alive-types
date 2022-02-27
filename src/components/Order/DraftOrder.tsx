@@ -25,7 +25,7 @@ export default function DraftOrder({ order, onView, onDelete }: DraftOrderProps)
             <div className="content has-text-left">
                 <em>Total: </em><strong>{currency.format(order.total)}</strong>
                 <br />
-                <em>Created At: </em><strong>{date.format(date.decode(order.createdAt))}</strong>
+                <em>Created At: </em><strong>{date.format(order.createdAt)}</strong>
             </div>
         </div>
         <footer className="card-footer">
