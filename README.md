@@ -10,6 +10,10 @@ run `yarn` or `npm i`
 
 run `yarn dev`
 
-# See project online
+# Online project
 
 Click [here](https://puppo.github.io/alive-types/)
+
+# Slides
+
+Click [here](https://speakerdeck.com/puppo/alive-types)
