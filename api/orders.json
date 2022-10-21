@@ -1,0 +1,156 @@
+[
+    {
+        "type": "draft",
+        "id": 1,
+        "createdAt": "2022-02-02T15:00:00Z",
+        "total": {
+            "amount": 3000,
+            "currency": "USD"
+        },
+        "customer": {
+            "id": 1,
+            "name": "John Doe",
+            "email": "john@doe.io",
+            "phone": "+1-555-555-5555"
+        }
+    },
+    {
+        "type": "draft",
+        "id": 2,
+        "createdAt": "2022-02-02T18:00:00Z",
+        "total": {
+            "amount": 1000,
+            "currency": "EUR"
+        },
+        "customer": {
+            "id": 2,
+            "name": "Tim Cutter",
+            "email": "tim@cutter.io",
+            "phone": "+1-555-555-5554"
+        }
+    },
+    {
+        "type": "progress",
+        "id": 3,
+        "createdAt": "2022-01-01T00:00:00Z",
+        "date": "2022-01-08T14:00:00Z",
+        "total": {
+            "amount": 40000,
+            "currency": "USD"
+        },
+        "customer": {
+            "id": 1,
+            "name": "John Doe",
+            "email": "john@doe.io",
+            "phone": "+1-555-555-5555"
+        }
+    },
+    {
+        "type": "progress",
+        "id": 4,
+        "createdAt": "2022-01-01T00:00:00Z",
+        "date": "2022-01-10T14:00:00Z",
+        "total": {
+            "amount": 50000,
+            "currency": "EUR"
+        },
+        "customer": {
+            "id": 2,
+            "name": "Tim Cutter",
+            "email": "tim@cutter.io",
+            "phone": "+1-555-555-5554"
+        }
+    },
+    {
+        "type": "ship",
+        "id": 5,
+        "createdAt": "2022-01-01T00:00:00Z",
+        "date": "2022-01-08T14:00:00Z",
+        "total": {
+            "amount": 30000,
+            "currency": "USD"
+        },
+        "customer": {
+            "id": 1,
+            "name": "John Doe",
+            "email": "john@doe.io",
+            "phone": "+1-555-555-5555"
+        },
+        "ship": {
+            "date": "2022-02-01T08:30:00Z",
+            "trackingNumber": "0987-0987-0987-0987",
+            "company": "Fast Delivery"
+        }
+    },
+    {
+        "type": "ship",
+        "id": 6,
+        "createdAt": "2022-01-01T00:00:00Z",
+        "date": "2022-01-10T14:00:00Z",
+        "total": {
+            "amount": 50000,
+            "currency": "EUR"
+        },
+        "customer": {
+            "id": 2,
+            "name": "Tim Cutter",
+            "email": "tim@cutter.io",
+            "phone": "+1-555-555-5554"
+        },
+        "ship": {
+            "date": "2022-02-22T08:30:00Z",
+            "trackingNumber": "0987-0987-0987-0865",
+            "company": "Super Fast Delivery"
+        }
+    },
+    {
+        "type": "delivery",
+        "id": 7,
+        "createdAt": "2022-01-01T00:00:00Z",
+        "date": "2022-01-08T14:00:00Z",
+        "total": {
+            "amount": 30000,
+            "currency": "USD"
+        },
+        "customer": {
+            "id": 1,
+            "name": "John Doe",
+            "email": "john@doe.io",
+            "phone": "+1-555-555-5555"
+        },
+        "ship": {
+            "date": "2022-02-01T08:30:00Z",
+            "trackingNumber": "0987-0987-0987-0987",
+            "company": "Fast Delivery"
+        },
+        "delivery": {
+            "date": "2022-02-10T08:30:00Z",
+            "signedBy": "Bobby Solo"
+        }
+    },
+    {
+        "type": "delivery",
+        "id": 8,
+        "createdAt": "2022-01-01T00:00:00Z",
+        "date": "2022-01-10T14:00:00Z",
+        "total": {
+            "amount": 50000,
+            "currency": "EUR"
+        },
+        "customer": {
+            "id": 2,
+            "name": "Tim Cutter",
+            "email": "tim@cutter.io",
+            "phone": "+1-555-555-5554"
+        },
+        "ship": {
+            "date": "2022-02-22T08:30:00Z",
+            "trackingNumber": "0987-0987-0987-0865",
+            "company": "Super Fast Delivery"
+        },
+        "delivery": {
+            "date": "2022-03-01T08:30:00Z",
+            "signedBy": "Robin Hood"
+        }
+    }
+]
